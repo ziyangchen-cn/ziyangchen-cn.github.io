@@ -1,0 +1,51 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --main-bg-color: #abc9c9;  /* 定义背景颜色变量 */
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.left-sidebar {
+    width: 250px; /* 或者你想要的任何宽度 */
+    margin-top: 10pt;
+    margin-bottom: 200pt;
+    margin-left: 10pt;
+    background-color: #021b18; /* 背景色，供参考 */
+    padding: 15px;
+    box-shadow: -3px 10px 14px 8px rgba(1, 25, 19, 0.6);; /* 添加阴影效果，供参考 */
+    position: fixed;
+    height: 90%;
+    overflow: hidden;
+    border-radius: 20px; /*将左侧栏的四个角都变为圆形*/
+    border-top: 1px solid #f2f6f5;
+    border-right: 1px solid #f2f6f5c5;
+    
+
+}
+
+.right-content {
+    margin-left: 300px; /* 使右侧内容从左侧栏的右侧开始。这应该与左侧栏的宽度相匹配 */
+    width: calc(100% - 300px); /* 计算正确的宽度，考虑到左侧栏 */
+    height: 100%;
+    overflow-y: scroll; /* 允许垂直滚动 */
+    padding: 15px;
+    background-color: var(--main-bg-color); /* 背景色，供参考 */
+}
+
+.move-right {
+    margin-left: 20pt;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: bold;
+}
