@@ -1,100 +1,369 @@
-body{
-    background-color:rgb(238, 238, 247);
-    padding: 20px;
+body, html {
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
 }
 
-img {
-    display: block;
-    margin-left: auto;
+/* 滚动条样式*/
+::-webkit-scrollbar{
+    width:1px;
+    background: rgb(255, 255, 255);
+    
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(136, 136, 136);
+}
+
+p {
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+
+.container {
     margin-right: auto;
-  }
-.beginning_box{
-   
-    padding: 20px;
-    max-width: 900px;
-    min-width: 900px;
+    margin-left: auto;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    height: 100%;
+    width: 70%;
+    max-width: 1200px;
+    min-width:870px;
+    background-color: rgba(171, 47, 47, 0);
+    min-height: 110%;
 }
 
-.personal_infomation{
-    width: 25%;
-    max-width: 200px;
-    min-width: 200px;
-    margin-left: 0;
-    background-color: white;
-    padding:20px;
-    border-radius: 20px;
-}
-.personal_infomation p{
-    text-align: center;
-}
-.welcome{
-    width: 60%;
-    height: 80%;
-    min-height: 200px;
-    margin-left: 20px;
-    margin-bottom: auto;
-    padding: 40px;
-}
-#typed-output {
-    font-size: 32px; /* 这设置字体大小为24像素，但您可以根据需要调整 */
-    line-height: 2;
+.left, .right {
+
+    box-sizing: border-box;
+    overflow-y: auto; /* 中间列的宽度是总宽度减去左右列宽度之和 */
+    background-color: rgba(112, 84, 84, 0.2);
 }
 
-#content{
-    max-width: 600px;
-    min-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.left {
+    padding: 10px;
+    width: 45px;
+    overflow: visible;
+    z-index: 4;
+    
+}
+.right {
+    padding: 20px;
+    width: 200px;
 }
 
-h1 {
-    margin-bottom: -10px;
+.middle {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    
+    
+    border-left: 1px solid gray; /* 设置左边界为灰线 */
+    border-right: 1px solid gray; /* 设置右边界为灰线 */
+
+    ::-webkit-scrollbar {
+        width: 100px;
+    }
+    z-index: 1;
+    min-width: 570px;
 }
 
-.position {
-    text-align: left;
-    width: 75%;
-  }
-  
-.year {
-    text-align: right;
-    width: 24%; 
+.section{
+    border-top: 1px solid #080707 ;
+    padding-bottom: 20px;
 }
 
-.position, .year{
-    margin-top: 30px;
-    margin-bottom: 0px;
-    display: inline-block;
+.icon{
+    padding-top: 30px;
+    background-color: rgba(238, 227, 227, 0.2);
+}
+.icon-link {
+    position: relative;
 }
 
-.item p {
-    display: inline-block;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 18px; 
+.icon-description {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 120%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    white-space: nowrap; /* 防止文本换行 */
+    font-size:10px;
+    z-index: 1112222;
+
 }
 
-.pub_title{
-    margin-top: 30px;
-    margin-bottom: 0px;
+.icon-link:hover .icon-description {
+    display: block;
+    
+   
+}
+
+
+.incline{
+    display:inline;
 }
 
 a {
-    color: black;
-  }
-  
-  a:visited {
-    color: grey;
-  }
-  
-  a:hover {
-    color: rgb(78, 9, 9);
-  }
-  
-  a:active {
-    color: rgb(237, 38, 38);
-  }
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        min-width: 600px;
+    }
+
+    .left {
+        height: 1000px; /* 假设图标宽度为40px */
+        display: flex; 
+        flex-direction: row; /* 在手机上，左列的图标横向排列 */
+        justify-content: space-around; /* 图标之间均匀分布 */
+        flex-wrap: wrap; /* 如果图标太多，允许它们换行 */
+        margin-bottom: 20px; /* 添加一些底部边距 */
+    
+        align-items: center;
+        width: 100%;
+        height: calc(1.1 * 40px); /* 假设图标宽度为40px */
+        overflow: auto;
+        
+    
+    }
+
+
+    .right {
+        display: none;  /* 隐藏右列 */
+        
+    }
+
+    .middle {
+        flex: 1;
+    }
+    .icon{
+        padding-top: 0px;
+    }
+}
+
+#home{
+    
+}
+.introduction{
+    display: flex;
+    align-items: center; /* 垂直居中对齐子元素 */
+    gap: 40px; /* 为子元素之间添加间距 */
+    padding: 10px;
+    font-family: Bradley Hand, cursive;
+}
+
+#self_short_introduction{
+    font-size: 12px;
+    color:#494949f0;
+    font-style: italic;
+}
+
+
+table {
+    line-height: 30px;
+    padding-top: 30px;
+}
+
+.pub{
+    padding-bottom: 20px;
+}
+
+.pub>img{
+    padding:10px;
+    background-color: #11111100;
+}
+.pub_title{
+    padding-bottom: 5px;
+}
+.pub_title_word{
+    display:inline;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0;  
+}
+
+.ads, .pdf{
+    display:inline;
+    padding: 2px;
+    font-size: 11px;
+    font-weight: 100;
+    color:rgba(35, 19, 172, 0.8);
+    text-decoration:underline;
+    background-color: rgb(191, 193, 190, 0.5);
+    border-radius: 5px;
+}
+
+.pub_author{
+    padding-bottom: 10px;
+}
+
+.fig_text {
+    padding-top: 0px;
+    display: flex; /* 使用Flexbox布局 */
+    align-items: center; /* 垂直居中对齐图片和文本 */
+    flex-direction: row;
+}
+
+.abstract_font{
+    font-size: 13px;
+    color: rgba(22, 52, 7, 0.8);
+    line-height: 20px;
+}
+
+.lineheight1{
+    line-height:25px;
+}
+
+.left_image {
+    flex:1;
+    margin-right: 20px; /* 在图片和文本之间添加一些间距 */
+    width: 40%; /* 或您想要的任何其他大小 */
+    height: auto; /* 保持图片的纵横比 */
+}
+
+.right_text {
+    flex-grow: 1; /* 允许文本容器在需要时占据更多的空间 */
+}
+
+
+
+/*   time line   */
+.timeline {
+    position: relative;
+    width: 550px;
+    background-color: rgba(0, 0, 0, 0);
+    margin: auto;
+}
+
+.timeline_event{
+    position: relative;
+    background-color: rgb(201, 201, 201);
+    width: 230px;
+    height: 80px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.timeline_event_right{
+    margin-left: auto;
+}
+.identity{
+    display: inline-block;
+    width:48%;
+    background-color: rgba(112, 84, 84, 0);
+    font-size: 12px;
+    margin-right: auto;
+}
+.year{
+    display: inline-block;
+    width: 50%;
+    background-color: rgba(16, 232, 117, 0);
+    margin-left: auto;
+    text-align: right;
+    font-size: 12px;
+    color: rgba(42, 45, 151, 0.7);
+}
+.place{
+    font-size: 17px;
+    font-weight: 700;
+    padding: 3px 2px;
+}
+.arrow_right{
+    width: 30px;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 20px solid rgb(201, 201, 201);  /* Adjust color as needed */
+    position:absolute;
+    top: 40px;
+    left: -50px;
+    z-index: 1;
+}
+.arrow_left{
+    width: 30px;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid rgb(201, 201, 201);  /* Adjust color as needed */
+    position:absolute;
+    top: 40px;
+    right:-50px;
+    z-index: 1;
+}
+.circle_right{
+    width: 5px;             /* 设置圆圈的宽度 */
+    height: 5px;            /* 设置圆圈的高度 */
+    border: 2px solid black;  /* 设置2px宽的黑色边框 */
+    border-radius: 50%;       /* 使div完全圆角 */
+    background-color: rgb(201, 201, 201); /* 确保背景是透明的 */
+    position:absolute;
+    top: 46px;
+    left:-28px;
+    z-index: 2;
+    
+}
+.circle_left{
+    width: 5px;             /* 设置圆圈的宽度 */
+    height: 5px;            /* 设置圆圈的高度 */
+    border: 2px solid black;  /* 设置2px宽的黑色边框 */
+    border-radius: 50%;       /* 使div完全圆角 */
+    background-color: rgb(201, 201, 201); /* 确保背景是透明的 */
+    position:absolute;
+    top: 46px;
+    right:-31px;
+    z-index: 2;
+    
+}
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #080707;
+}
+
+.event {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 60px;
+}
+
+.event .date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.event .description {
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
 

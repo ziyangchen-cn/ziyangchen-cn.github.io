@@ -1,0 +1,100 @@
+body{
+    background-color:rgb(238, 238, 247);
+    padding: 20px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.beginning_box{
+   
+    padding: 20px;
+    max-width: 900px;
+    min-width: 900px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.personal_infomation{
+    width: 25%;
+    max-width: 200px;
+    min-width: 200px;
+    margin-left: 0;
+    background-color: white;
+    padding:20px;
+    border-radius: 20px;
+}
+.personal_infomation p{
+    text-align: center;
+}
+.welcome{
+    width: 60%;
+    height: 80%;
+    min-height: 200px;
+    margin-left: 20px;
+    margin-bottom: auto;
+    padding: 40px;
+}
+#typed-output {
+    font-size: 32px; /* 这设置字体大小为24像素，但您可以根据需要调整 */
+    line-height: 2;
+}
+
+#content{
+    max-width: 600px;
+    min-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    margin-bottom: -10px;
+}
+
+.position {
+    text-align: left;
+    width: 75%;
+  }
+  
+.year {
+    text-align: right;
+    width: 24%; 
+}
+
+.position, .year{
+    margin-top: 30px;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+.item p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px; 
+}
+
+.pub_title{
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+a {
+    color: black;
+  }
+  
+  a:visited {
+    color: grey;
+  }
+  
+  a:hover {
+    color: rgb(78, 9, 9);
+  }
+  
+  a:active {
+    color: rgb(237, 38, 38);
+  }
+

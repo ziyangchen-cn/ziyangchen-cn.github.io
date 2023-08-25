@@ -1,53 +1,236 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Ziyang Chen (陈子扬)</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" ></script>
-    
+    <title>个人主页</title>
+    <script src="https://kit.fontawesome.com/7be31e61ff.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-    <div class="beginning_box">
-        <div class="personal_infomation">
-            <img src="image/photo.jpg" alt="photo" width="150px"
-            style="border-radius:40px;">
-            <p>Phd student</p>
-            <p>Shanghai Jiao Tong University</p>
-            <p>E-mail: chen_zy@sjtu.edu.cn</p>
-        </div> 
-            <div class="welcome">
-                <span id="typed-output"></span>
-            </div>
+    <div class="container">
+        <div class="left">
+            <a class="icon-link">
+                <div class="icon" data-target="home">
+                    <i class="fa-solid fa-house fa-xl"></i>  
+                </div>
+                <span class="icon-description">home</span>
+            </a>  
+            <a class="icon-link">
+                <div class="icon" data-target="my_research">
+                    <i class="fa-solid fa-newspaper fa-xl"></i>
+                </div>
+                <span class="icon-description">My work</span>
+            </a>  
+            <a class="icon-link">
+                <div class="icon" data-target="experience">
+                    <i class="fa-solid fa-shuttle-space fa-rotate-270 fa-xl"></i>
+                </div>
+                <span class="icon-description">Experience</span>
+            </a>  
+            <a class="icon-link">
+                <div class="icon" data-target="skills">
+                    <i class="fa-solid fa-laptop-code fa-xl"></i>
+                </div>
+                <span class="icon-description">Skills</span>
+            </a>   
         </div>
-    </div>  
 
-    <div id = "content">
-        <section>
-            <h1>Education</h1>
-            <p class="position">Visiting Researcher</p><p class="year">2022-2023</p>
-            <p class="place">Max Planck Institute for Astrophysics</p>
-            <p class="advisor">Advisors: Prof. Eiichiro Komatsu</p>
 
-            <p class="position">Ph.D. in Astronomy</p><p class="year">2018--present</p>
-            <p class="place">Shanghai Jiao Tong University</p>
-            <p class="advisor">Advisors: Prof. Pengjie Zhang</p>
-            <p class="thesis">Thesis: TBD</p>
+
+        <div class="middle">
             
-            <p class="position">B.Sc. in Astronomy</p><p class="year">2014--2018</p>
-            <p class="place">University of Science and Technology of China</p>
-        </section>
+            <div id="home" class="section">
+                <div class="introduction">
+                    <img src="image/photo_squ.jpg" alt="photo" width="120px" 
+                style="border-radius:50px;">
+                    <div >
+                        <p>Ziyang Chen</p>
+                        <p>Phd student</p>
+                        <p>Shanghai Jiao Tong University</p>
+                    </div>
+                </div>
 
-        <section>
-            <h1>Publications</h1>
-            <a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220112591C/abstract"><p class="pub_title">Thermal energy census with the Sunyaev-Zel'dovich effect of DESI galaxy clusters/groups and its implication on the weak lensing power spectrum</p></a>
-            <p class="pub_author">Ziyang Chen, Pengjie Zhang, Xiaohu Yang</p>
+                <div id = "self_short_introduction">
+                    <p>Hello! Nice to meet you! My name is Ziyang Chen (陈子扬),  a Phd student at Shanghai Jiao Tong University. After obtaining a BSc from the University of Science and Technology in China, I spent five years investigating the SZ effect. My research interests lie in the distribution and abundance of baryons in the universe, their thermal state, and how the baryon feedback process shapes matter distribution. I am pleased to broaden my research field. I am also interested in deep learning and its various applications in cosmology, the early universe, gravitational waves, and other related areas.</p>
 
-            <a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.510.5916C/abstract"><p class="pub_title">Detection of pairwise kSZ effect with DESI galaxy clusters and Planck</p><a>
-            <p class="pub_author">Ziyang Chen, Pengjie Zhang, Xiaohu Yang, Yi Zheng</p>
-    
+                    <p>Besides my research, I enjoy hiking, reading books (especially historical or fictional ones), and exploring new experiences. </p>
+
+                    <p>Feel free to explore my website to learn more about my research and publications. If you have any questions or would like to collaborate, please don't hesitate to reach out.</p>
+                    </div>
+            </div>
+
+
+            <div id="my_research"  class="section">
+                <h1> My Research </h1>
+                
+                <div class="pub">
+                    <div class="pub_title">
+                        <p class="pub_title_word">
+                            Statistics of thermal gas pressure as a probe of cosmology and galaxy formation
+                        </p>
+                        <a href="" class="ads">ADS</a> 
+                        <a href="" class="pdf">PDF</a>
+                    </div>
+                    <p class="pub_author"><b>Ziyang Chen</b>, Drew Jamieson, Eiichiro Komatsu, Alexandre Barreira, Klaus Dolag, R\"udiger Pakmor, Volker Springel</p>
+                    
+                    <img src="image/tSZLSS_bPe.png" width=100%;>
+                    <p class="abstract_font">
+                        In this work, we show that the statistics of thermal gas pressure \(\langle b_\mathrm{h}P_e\rangle\) is sensitive to both cosmology and galaxy formation model.
+                        We find that state-of-the-art hydrodynamical simulations of galaxy formation, Magneticum and MillenniumTNG, predict a larger \(\langle b_\mathrm{h}P_e\rangle\) than that observed at z<0.5 by a factor of 1.05. This can be explained by a lower value of \(\sigma_8\) and \(\Omega_\mathrm{m}\), similar to the so-called "\(S_8\) tension" seen in the gravitational lensing effect. 
+                        At higher redshift, we find that both simulations are in a modest tension with the existing upper bounds on \(\langle b_\mathrm{h}P_e\rangle\). We also find a significant difference between these simulations, which we attribute to the difference in the galaxy formation models. Therefore, more precise measurements of \(\langle b_\mathrm{h}P_e\rangle\) at z>2 will provide a new test of our understanding of galaxy formation.
+                    </p>
+                    
+                </div>
+                
+                <div class="pub">
+                    <div class="pub_title">
+                        <p class="pub_title_word">
+                            Thermal energy census with the Sunyaev-Zel'dovich effect of DESI galaxy clusters/groups and its implication on the weak lensing power spectrum (2023)
+                        </p>
+                        <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...953..188C/abstract" class="ads">ADS</a> 
+                        <a href="https://ui.adsabs.harvard.edu/link_gateway/2023ApJ...953..188C/EPRINT_PDF" class="pdf">PDF</a>
+                    </div>
+                    <p class="pub_author"><b>Ziyang Chen</b>, Pengjie Zhang, Xiaohu Yang</p>
+                    
+                    <p class="abstract_font">
+                        We carry out a thermal energy census of hot baryons at \(z < 1\), by cross-correlating the \emph{Planck} MILCA y-map with 0.8 million clusters/groups selected from the Yang et.al (2021) catalog. The thermal Sunyaev-Zel'dovich (tSZ) effect around these clusters/groups are reliably obtained, which enables us to make our model constraints based on one-halo (1h) and two-halo (2h) contributions, respectively.
+                    </p>
+                    
+                    <p class="abstract_font"> (1)<b>One-halo term</b></p>
+                    <img src="image/tSZ_stack_gas.pdf" width=100%;>
+                    <p class="abstract_font">
+                        The total measurement S/N of the one-halo term is 63. We constrain the Y-M relation over the halo mass range of \(10^{13}-10^{15} M_\odot/h\), and find \(Y\propto M^{\alpha}\) with \(\alpha= 1.8 \) at z=0.14 (\(\alpha=2.1\) at z=0.75). 
+                        The hot gas fraction \(f_{\rm gas}\) in clusters/groups monotonically increase with halo mass, where \(f_{\rm gas}\) of a \(10^{14} M_\odot/h\) halo is \(\sim 50\% (25\%\)) of the cosmic mean at z=0.14 (0.75).
+                    </p>
+
+                    <p class="abstract_font"> (2) <b>Two-halo term</b></p>
+                    <div class="fig_text">
+                        <img src="image/tsz_stack_bype.pdf" class="left_image">
+                        <p class="right_text abstract_font lineheight1">
+                            
+                            The two-halo term is used to constrain the bias-weighted electron pressure $\langle b_yP_e \rangle$. We find that $\langle b_yP_e \rangle$ (in unit of $\rm meV/cm^3$) increases from $0.24\pm 0.02$ at $z=0.14$ to $0.45\pm 0.02$ at $z=0.75$. These results lead to several implications. 
+                        </p>
+                    </div>
+
+                    
+
+                    <p class="abstract_font">  
+                          The above results lead to significant suppression of matter and weak lensing power spectrum at small scales. These implications are important for astrophysics and cosmology, and we will further investigate them with improved data  and gas modeling.
+                    </p>
+
+                </div>
+                
+                
+                <div class="pub">
+                    <div class="pub_title">
+                        <p class="pub_title_word">
+                            Detection of pairwise kSZ effect with DESI galaxy clusters and Planck (2022)
+                        </p>
+                        <a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.510.5916C/abstract" class="ads">ADS</a>
+                        <a href="https://ui.adsabs.harvard.edu/link_gateway/2022MNRAS.510.5916C/EPRINT_PDF" class="pdf">PDF</a>
+                    </div>
+                    <p class="pub_author"><b>Ziyang Chen</b>, Pengjie Zhang, Xiaohu Yang, Yi Zheng</p>
+
+                    <div class="fig_text">
+                        <img src="image/pairwise_ksz.pdf" class="left_image">
+                        <div class="right_text abstract_font">
+                        Combining galaxy clusters in DESI imaging and the Planck temperature maps,
+                        We report a \(5\sigma\) detection of the pairwise kinematic Sunyaev-Zel'dovich (kSZ) effect. The detection is facilitated by both improvements in the data and in the analysis method. 
+                        The baseline cluster sample,  containing the \(1.2\times 10^5\) richest galaxy clusters of typical mass \(\sim 10^{14} M_{\odot}/h\) at typical redshift \(0.2\sim0.5\), rules out the null hypothesis at $5\sigma$.  When fitting with a pairwise kSZ template from simulations,  the signal is detected at \(4.7\sigma\) and  the average optical depth is constrained as \(\bar{\tau}_e=(1.66\pm 0.35)\times 10^{-4}\).
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        </section>
+            <div id="experience"  class="section">
+                <h1>Experience</h1>
+                <div class="timeline">
+                    <div class="timeline_event timeline_event_right">
+                        <div class="identity">Visiting Researcher</div>
+                        <div class="year">2022 - 2023</div>
+                        <div class="place">Max Planck Institute for Astrophysics </div>
+                        <div class="advisor">Advisor: Prof. Eiichiro Komatsu</div>
+                        <span class="arrow_right"></span>
+                        <span class="circle_right"></span>
+                    </div>
+
+                    <div class="timeline_event timeline_event_left">
+                        <div class="identity"> Ph.D. in Astromomy</div>
+                        <div class="year">2018 - prevent</div>
+                        <div class="place">Shanghai Jiao Tong University</div>
+                        <div class="advisor">Advisor: Prof. Pengjie Zhang</div>
+                        <span class="arrow_left"></span>
+                        <span class="circle_left"></span>
+                    </div>
+
+                    <div class="timeline_event timeline_event_right">
+                        <div class="identity"> B.Sc. in Astronomy</div>
+                        <div class="year">2014 - 2018</div>
+                        <div class="place">University of Science and Technology of China</div>
+                        <span class="arrow_right"></span>
+                        <span class="circle_right"></span>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+            <div id="skills"  class="section">
+                <h1>Skills</h1>
+                linux 
+                python
+                numpy 
+                matplotlib
+                astropy 
+                html
+                
+            </div>
+            <div id="section2">
+                
+
+            </div>
+            <!-- 更多内容 -->
+        </div>
+        <div class="right">
+
+            <table >
+                <tr >
+                    <td><i class="fa-solid fa-envelope"></i></td>
+                    <td>chen_zy@sjtu.edu.cn</td>
+                </tr>
+                <tr valign="top">
+                    <td><i class="fa-solid fa-location-dot"></i></td>
+                    <td>No.800 Dongchuang Road,
+                        Shanghai</td>
+                </tr>
+                
+                <tr>
+                
+                    <td>
+                        <a href="https://orcid.org/0000-0001-8648-1789">
+                            <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a> 
+                    </td>
+                   
+                    <td>
+                        <a href="https://github.com/ziyangchen-cn">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </td>
+                </tr>
+            </table> 
+             
+              
+            
+        </div>
+
+
     </div>
 </body>
+</html>
