@@ -122,46 +122,11 @@ a:hover {
     text-decoration: underline;
 }
 
-/* 响应式设计 */
-@media (max-width: 1000px) {
-    .container {
-        flex-direction: column;
-        min-width: 600px;
-    }
-
-    .left {
-        height: 1000px; /* 假设图标宽度为40px */
-        display: flex; 
-        flex-direction: row; /* 在手机上，左列的图标横向排列 */
-        justify-content: space-around; /* 图标之间均匀分布 */
-        flex-wrap: wrap; /* 如果图标太多，允许它们换行 */
-        margin-bottom: 20px; /* 添加一些底部边距 */
-    
-        align-items: center;
-        width: 100%;
-        height: calc(1.1 * 40px); /* 假设图标宽度为40px */
-        overflow: auto;
-        
-    
-    }
 
 
-    .right {
-        display: none;  /* 隐藏右列 */
-        
-    }
 
-    .middle {
-        flex: 1;
-    }
-    .icon{
-        padding-top: 0px;
-    }
-}
 
-#home{
-    
-}
+
 .introduction{
     display: flex;
     align-items: center; /* 垂直居中对齐子元素 */
@@ -255,7 +220,7 @@ table {
 
 .timeline_event{
     position: relative;
-    background-color: rgb(201, 201, 201);
+    background-color: rgba(201, 201, 201,1);
     width: 230px;
     height: 80px;
     padding: 10px;
@@ -263,6 +228,9 @@ table {
 }
 .timeline_event_right{
     margin-left: auto;
+}
+.timeline_event_left{
+    margin-right: auto;
 }
 .identity{
     display: inline-block;
@@ -290,7 +258,7 @@ table {
     height: 0;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-right: 20px solid rgb(201, 201, 201);  /* Adjust color as needed */
+    border-right: 20px solid rgba(201, 201, 201,0);  /* Adjust color as needed */
     position:absolute;
     top: 40px;
     left: -50px;
@@ -301,11 +269,11 @@ table {
     height: 0;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-left: 20px solid rgb(201, 201, 201);  /* Adjust color as needed */
+    border-left: 20px solid rgba(201, 201, 201,1);  /* Adjust color as needed */
     position:absolute;
     top: 40px;
     right:-50px;
-    z-index: 1;
+    z-index: 10;
 }
 .circle_right{
     width: 5px;             /* 设置圆圈的宽度 */
@@ -341,26 +309,201 @@ table {
     background-color: #080707;
 }
 
-.event {
-    position: relative;
-    margin-bottom: 20px;
-    padding-left: 60px;
+
+
+
+/* 响应式设计 */
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        min-width: 600px;
+     
+    }
+
+    .left {
+        height: 100px; /* 假设图标宽度为40px */
+        display: flex; 
+        flex-direction: row; /* 在手机上，左列的图标横向排列 */
+        justify-content: space-around; /* 图标之间均匀分布 */
+        flex-wrap: wrap; /* 如果图标太多，允许它们换行 */
+        margin-bottom: 20px; /* 添加一些底部边距 */
+    
+        align-items: center;
+        width: 100%;
+        height: calc(1.1 * 40px); /* 假设图标宽度为40px */
+        overflow: auto;
+    }
+
+
+    .right {
+        display: none;  /* 隐藏右列 */
+    }
+
+    .middle {
+        flex: 1;
+    }
+    .icon{
+        padding-top: 0px;
+    }
 }
 
-.event .date {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    text-align: right;
-    font-weight: bold;
-}
+@media (max-width: 800px){
+    
+    .container {
+        flex-direction: column;
+        min-width: 400px;
+    }
 
-.event .description {
-    padding: 5px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .middle{
+        flex: 1;
+        min-width: 390px;
+  
+    }
+    .right {
+        display: none;  /* 隐藏右列 */
+    }
+
+    .icon{
+        padding-top: 0px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .pub_title_word{
+        font-size: 15px;        
+    }
+    .ads, .pdf{
+        font-size: 10px;
+    }
+    .small_size{
+        font-size: 10px;
+    }
+
+    .pub_author{
+        font-size: 10px;
+    }
+
+    .abstract_font{
+        font-size: 10px;
+        color: rgba(22, 52, 7, 0.8);
+        line-height: 11px;
+    }
+    .fig_text {
+        padding-top: 0px;
+        display: flex; /* 使用Flexbox布局 */
+        align-items: center; /* 垂直居中对齐图片和文本 */
+        flex-direction: column;
+    }
+    .left_image {
+        flex:1;
+        margin-right: 10px; /* 在图片和文本之间添加一些间距 */
+        width: 80%; /* 或您想要的任何其他大小 */
+        height: auto; /* 保持图片的纵横比 */
+    }
+
+    /*   time line   */
+    .timeline {
+        width: 380px;
+    }
+
+    .timeline_event{
+        width: 280px;
+        height: 50px;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 10px auto;
+        left:10%
+    }
+    
+
+    
+    .identity{
+        display: inline-block;
+        width:48%;
+        background-color: rgba(112, 84, 84, 0);
+        font-size: 12px;
+        margin-right: auto;
+    }
+    .year{
+        display: inline-block;
+        width: 50%;
+        background-color: rgba(16, 232, 117, 0);
+        margin-left: auto;
+        text-align: right;
+        font-size: 12px;
+        color: rgba(42, 45, 151, 0.7);
+    }
+    .place{
+        font-size: 13px;
+        font-weight: 700;
+        padding: 3px 2px;
+    }
+    .advisor{
+        font-size: 10px;
+    }
+    .arrow_right{
+        width: 30px;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 20px solid rgba(201, 201, 201,1);  /* Adjust color as needed */
+        position:absolute;
+        top: 20px;
+        left: -50px;
+        z-index: 1;
+    }
+    .arrow_left{
+        width: 30px;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 20px solid rgba(201, 201, 201,1);  /* Adjust color as needed */
+        border-left: none;
+        position:absolute;
+        top: 20px;
+        left: -50px;
+        z-index: 1;
+        
+    }
+    .circle_right{
+        width: 5px;             /* 设置圆圈的宽度 */
+        height: 5px;            /* 设置圆圈的高度 */
+        border: 2px solid black;  /* 设置2px宽的黑色边框 */
+        border-radius: 50%;       /* 使div完全圆角 */
+        background-color: rgb(201, 201, 201); /* 确保背景是透明的 */
+        position:absolute;
+        top: 25px;
+        left:-30px;
+        z-index: 2;
+        
+    }
+    .circle_left{
+        width: 5px;             /* 设置圆圈的宽度 */
+        height: 5px;            /* 设置圆圈的高度 */
+        border: 2px solid black;  /* 设置2px宽的黑色边框 */
+        border-radius: 50%;       /* 使div完全圆角 */
+        background-color: rgb(201, 201, 201); /* 确保背景是透明的 */
+        position:absolute;
+        top: 25px;
+        left:-30px;
+        z-index: 2;
+        
+    }
+    .timeline:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 56px;
+        width: 2px;
+        background-color: #080707;
+    }
+
+
+
+    
 }
 
 
