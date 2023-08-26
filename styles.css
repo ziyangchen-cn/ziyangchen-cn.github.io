@@ -31,7 +31,6 @@ p {
     max-width: 1200px;
     min-width:870px;
     background-color: rgba(171, 47, 47, 0);
-    min-height: 110%;
 }
 
 .left, .right {
