@@ -30,14 +30,14 @@ p {
     width: 70%;
     max-width: 1200px;
     min-width:870px;
-    background-color: rgba(171, 47, 47, 0);
+    background-color: rgba(120, 118, 118, 0);
 }
 
 .left, .right {
 
     box-sizing: border-box;
     overflow-y: auto; /* 中间列的宽度是总宽度减去左右列宽度之和 */
-    background-color: rgba(112, 84, 84, 0.2);
+    background-color: rgba(107, 105, 105, 0.2);
 }
 
 .left {
@@ -135,7 +135,7 @@ a:hover {
 }
 
 #self_short_introduction{
-    font-size: 12px;
+    font-size: 20px;
     color:#494949f0;
     font-style: italic;
 }
@@ -257,7 +257,7 @@ table {
     height: 0;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-right: 20px solid rgba(201, 201, 201,0);  /* Adjust color as needed */
+    border-right: 20px solid rgba(187, 87, 87, 0);  /* Adjust color as needed */
     position:absolute;
     top: 40px;
     left: -50px;
